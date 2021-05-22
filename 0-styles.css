@@ -1,0 +1,49 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    margin: 4rem  auto;
+    font-size: 3rem;
+    
+}
+li {
+    border: 1px solid black;
+    height: 40rem;
+    border-radius: 1rem;
+    width: 250px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 5rem;
+    padding: 1.6rem;
+}
+
+.icon {
+    display: block;
+    height: 100vh;
+    width: 100wh;
+}
+
+.i-html,.i-css,.i-js {
+  background: no-repeat url("images/0-sprite.png");
+  background-size: 60rem;
+  background-position-y: 3rem;
+}
+.i-html {
+  background-position-x: 1rem;
+}
+.i-css {
+  background-position-x: -19rem;
+}
+.i-js {
+  background-position-x: -39rem;
+}
