@@ -1,0 +1,17 @@
+.toggle {
+    padding: 30px;
+}
+.toggle-cb {
+    display: none;
+}
+.toggle-label {
+    position: relative;
+}
+.toggle-label {
+    content: url(./images/check_off.png);
+    position: absolute;
+}
+.toggle-cb:checked +.toggle-label, .toggle-switch {
+    content: url(./images/check_on.png);
+    position: absolute;
+}
