@@ -1,0 +1,117 @@
+html {
+    font-size: 62.5%;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 8%;
+}
+.menu-open {
+    visibility: hidden;
+}
+.menu-line-1 {
+    background-color: white;
+}
+.menu-line-1,
+.menu-line-2,
+.menu-line-3 {
+  background-color: #fff;
+  height: 4px;
+  width: 45%;
+  margin: .3rem;
+  transform: rotate(0);
+  transition: transform 0.1s;
+}
+.menu-open:checked + .menu-open-button,
+.menu-item {
+    height: 6rem;
+    width: 6rem;
+}
+
+/* BUtton 
+   =================== */
+
+.menu-open-button {
+    flex-direction: column;
+    height: 7rem;
+    width: 7rem;
+}
+.menu-open-button:hover {
+    height: 7.7rem;
+    width: 7.7rem;
+}
+
+.menu-open-button, .menu-item {
+    background-color: #c40808;
+    border: 1px solid #be0707;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.4rem;
+    position: absolute;
+    cursor: pointer;
+}
+.menu-open-button {
+    top: 0;
+    z-index: 1;
+}
+.menu-item {
+    text-decoration: none;
+    top: 0;
+    font-size: 2.24rem;
+    visibility: hidden;
+    transition: top 1s;
+    z-index: 0;
+}
+
+.menu-item:hover {
+    background-color: #fff;
+}
+.menu-item:hover i {
+    color: #be0707;
+}
+i {
+    color: #ffffff;
+}
+
+.menu-open:checked + .menu-open-button .menu-line-1,
+.menu-open:checked + .menu-open-button .menu-line-3 {
+    transform-origin: left;
+    margin-left: .7rem;
+   transition: transform 0.3s ease-in-out;
+}
+
+.menu-open:checked + .menu-open-button .menu-line-1 {
+    transform: rotate(47deg);
+}
+.menu-open:checked + .menu-open-button .menu-line-3 {
+    transform: rotate(-47deg);
+} 
+.menu-open:checked + .menu-open-button .menu-line-2 {
+    visibility: hidden;
+}
+.menu-open:checked ~ .menu-item {
+    visibility: visible;
+}
+.menu-open:checked ~ .menu-item:nth-of-type(1) {
+    top: 8rem;
+}
+.menu-open:checked ~ .menu-item:nth-of-type(2) {
+    top: 15rem;
+}
+.menu-open:checked ~ .menu-item:nth-of-type(3) {
+    top: 22rem;
+}
+.menu-open:checked ~ .menu-item:nth-of-type(4) {
+    top: 29rem;
+}
+.menu-open:checked ~ .menu-item:nth-of-type(5) {
+    top: 36rem;
+}
+.menu-open:not(:checked) + .menu-open-button {
+	animation-duration: 2s;
+}
